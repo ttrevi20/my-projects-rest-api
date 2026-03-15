@@ -10,6 +10,11 @@
     "hono": "^4.12.8"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.4.0",
+    "prettier": "3.8.1",
     "wrangler": "^4.4.0"
   }
 }
