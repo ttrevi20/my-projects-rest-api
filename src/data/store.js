@@ -21,8 +21,8 @@ let tasks = [
   {
     id: 1,
     project_id: 1,
-    title: 'Draft homepage wireframes',
-    description: 'Create desktop and mobile layout drafts.',
+    title: 'Plan homework layout and structure',
+    description: 'Design a layout to organize assignments and due dates for desktop and mobile.',
     status: 'in_progress',
     created_at: seededAt,
     updated_at: seededAt,
@@ -30,8 +30,8 @@ let tasks = [
   {
     id: 2,
     project_id: 1,
-    title: 'Collect new screenshots',
-    description: 'Replace old portfolio images.',
+    title: 'Upload assignment screenshots',
+    description: 'Upload homework info and attach any related screenshots or files.',
     status: 'todo',
     created_at: seededAt,
     updated_at: seededAt,
@@ -39,8 +39,8 @@ let tasks = [
   {
     id: 3,
     project_id: 2,
-    title: 'Finalize slide deck',
-    description: 'Include examples of good API design.',
+    title: 'Complete group presentation slides',
+    description: 'Finalize slides and include clear examples for the group project.',
     status: 'done',
     created_at: seededAt,
     updated_at: seededAt,
