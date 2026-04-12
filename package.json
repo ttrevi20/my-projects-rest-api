@@ -10,6 +10,7 @@
     "db:migrate:remote": "wrangler d1 migrations apply projects_db --remote"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "drizzle-orm": "^0.45.2",
     "hono": "^4.12.5",
     "zod": "^4.3.6"
