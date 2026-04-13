@@ -1,5 +1,5 @@
-import { verifyAccessToken } from '../../routes/auth.js'
-import { sendError } from '../response.js'
+import { verifyAccessToken } from '../utils/auth.js'
+import { sendError } from '../utils/response.js'
 
 export async function authenticate(c, next) {
   const authHeader = c.req.header('Authorization')
