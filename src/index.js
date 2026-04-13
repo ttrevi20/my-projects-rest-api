@@ -17,24 +17,22 @@ app.use('*', async (c, next) => {
   await next()
 })
 
-// Rate limiter middleware - requires AUTH_LIMITER KV binding
-// Uncomment when deploying to production
-// app.use(
-//   rateLimiter({
-//     binding: (c) => c.env.AUTH_LIMITER,
-//     keyGenerator: (c) => c.req.header('cf-connecting-ip') ?? '',
-//     message: (c) => {
-//       return {
-//         error: {
-//           code: 'TOO_MANY_REQUESTS',
-//           message: 'Too many requests, please try again later.',
-//           details: [],
-//           trace_id: c.get('traceId'),
-//         },
-//       }
-//     },
-//   }),
-// )
+app.use(
+  rateLimiter({
+    binding: (c) => c.env.AUTH_LIMITER,
+    keyGenerator: (c) => c.req.header('cf-connecting-ip') ?? '',
+    message: (c) => {
+      return {
+        error: {
+          code: 'TOO_MANY_REQUESTS',
+          message: 'Too many requests, please try again later.',
+          details: [],
+          trace_id: c.get('traceId'),
+        },
+      }
+    },
+  }),
+)
 
 app.use(
   '/api/*',
